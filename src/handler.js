@@ -24,15 +24,15 @@ const PostSymptoms = (request, h) => {
                 return h.response({ success: true, message: 'Gejala berhasil dipost.', gejala }).code(201);
             } else {
                 // Jika tidak ada gejala yang dipilih, kirim respons dengan status code 400 dan pesan kesalahan
-                return h.response({ error: 'Tidak ada gejala yang dipilih.' }).code(400);
+                return h.response({ error:'Tidak ada gejala yang dipilih.' }).code(400);
             }
         } else {
             // Jika gagal, kirim respons dengan status code 400 dan pesan kesalahan
-            return h.response({ error: 'Gejala tidak ditemukan.' }).code(400);
+            return h.response({success: false, message:'Gejala tidak ditemukan.' }).code(400);
         }
     } catch (error) {
         // Jika terjadi kesalahan, kirim respons dengan status code 500 dan pesan kesalahan
-        return h.response({ error: 'Terjadi kesalahan dalam memposting gejala.' }).code(500);
+        return h.response({ success: false, message: 'Terjadi kesalahan dalam memposting gejala.' }).code(500);
     }
 };
 
