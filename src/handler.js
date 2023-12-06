@@ -16,7 +16,12 @@ const PostSymptoms = (request, h) => {
 
         if (selectedGejala) {
             const gejala = selectedGejala
-                .map((value, index) => (value === '1' ? data.gejala[index].nama : null))
+                //.map((value, index) => (value === 1 ? data.gejala[index].nama : null))
+                // POST data sesuai dengan id dan menampilkannya 
+                .map((id) => {
+                    const matchedSymptom = data.gejala.find((symptom) => symptom.id === id);
+                    return matchedSymptom ? matchedSymptom.nama : null;
+                })
                 .filter(Boolean);
 
             if (gejala.length > 0) {
