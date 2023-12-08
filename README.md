@@ -1,6 +1,4 @@
 # Petsymptoms API
-## How to use
-
 ## URL 
 - https://backend-dot-pawtopia-405619.et.r.appspot.com
 ## Method
