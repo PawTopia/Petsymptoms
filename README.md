@@ -1,6 +1,8 @@
 # Petsymptoms API
 ## URL 
 - https://backend-dot-pawtopia-405619.et.r.appspot.com
+## content type
+Aplication/json
 ## Method
 - GET
   - add some `/gejala` at the end `https://backend-dot-pawtopia-405619.et.r.appspot.com/gejala`
